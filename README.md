@@ -1,15 +1,5 @@
 # Node.js Server Minimal
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 
 Node.js Server Minimal is a lightweight and minimalistic boilerplate for setting up a basic Node.js server. This repository aims to provide a starting point for backend developers to quickly create a server with essential functionalities.
@@ -21,6 +11,19 @@ The key features of this Node.js server boilerplate include:
 - Simple and easy-to-understand code structure.
 - Basic server configuration with Express.
 - Configurable port number for easy deployment.
+- Routing setup for handling different HTTP requests.
+- JSON parsing middleware for handling request payloads.
+- Error handling middleware for graceful error responses.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
@@ -31,13 +34,17 @@ To get started with the Node.js Server Minimal, follow these steps:
 3. Install the required dependencies: `npm install`
 4. Start the server: `npm start`
 
-The server will be running on the default port 3000. You can access it at `http://localhost:3000`. To change the port number, modify the `PORT` constant in the `server.js` file.
+The server will be running on the default port 3000. You can access it at `http://localhost:3000`. To change the port number, modify the `PORT` constant in the `index.js` file.
 
 ## Project Structure
 
 The project structure is organized as follows:
 
-- `server.js`: The main server file that configures and starts the Express server.
+- `index.js`: The main server file that configures and starts the Express server.
+- `routes/`: Contains route handlers for different HTTP endpoints.
+- `middlewares/`: Holds middleware functions used in the request pipeline.
+- `controllers/`: Houses controller functions that handle request processing.
+- `models/`: Placeholder for database models (not implemented in this minimal version).
 - `package.json`: Project configuration and dependencies.
 - `README.md`: Project documentation.
 
@@ -46,6 +53,7 @@ The project structure is organized as follows:
 The following dependencies are used in this project:
 
 - Express: A minimalistic web application framework for Node.js.
+- Body-parser: Middleware for parsing JSON request bodies.
 - Nodemon: Development dependency for automatically restarting the server during development.
 
 ## Contributing

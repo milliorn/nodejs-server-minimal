@@ -1,6 +1,9 @@
 const http = require('http');
 const fs = require('fs');
 
+require('dotenv').config()
+// console.log(process.env) // remove this after 
+
 // Create a server
 const server = http.createServer((req, res) => {
   if (req.url === '/robots.txt') {
@@ -35,7 +38,7 @@ const server = http.createServer((req, res) => {
 });
 
 // Set the port
-const port = 3000;
+const port = process.env.PORT || 3001;
 // Listen to the port
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
