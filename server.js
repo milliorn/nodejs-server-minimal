@@ -1,5 +1,20 @@
 const http = require('http');
 const fs = require('fs');
+const bodyParser = require('body-parser');
+const express = require('express');
+
+// Create an express app
+const app = express();
+
+// Load the .env file
+require('dotenv').config()
+// console.log(process.env) // remove this after 
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 // Create a server
 const server = http.createServer((req, res) => {
@@ -35,7 +50,7 @@ const server = http.createServer((req, res) => {
 });
 
 // Set the port
-const port = 3000;
+const port = process.env.PORT || 3001;
 // Listen to the port
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
