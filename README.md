@@ -1,5 +1,7 @@
 # Node.js Server Minimal
 
+[![CodeQL](https://github.com/milliorn/nodejs-server-minimal/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/milliorn/nodejs-server-minimal/actions/workflows/github-code-scanning/codeql)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
